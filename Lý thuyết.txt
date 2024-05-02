@@ -1,0 +1,68 @@
+Lý thuyết:
+Câu 1. Bit là đơn vị thông tin của máy tính.  Một bit chỉ có thể nhận và hiểu 1 trog 2 giá trị "đúng hoặc sai, bật hoặc tắt, có hoặc không"
+Câu 2. 1 byte = 8 bits
+Câu 3. 4 tính chất của lập trình hướng đối tượng là tính đa hình, tính trừu tượng, tính đóng gói và tính kế thừa
+Trong đó:
+Tính đóng gói là cho phép ẩn đi thông tin của đối tượng.
+Tính kế thừa là kỹ thuật cho phép kế thừa lại những tính năng mà một đối tượng khác đã có giúp tránh việc code lặp dư thừa.
+Tính đa hình là một đối tượng thuộc các lớp khác nhau có thể hiểu cùng một thông điệp theo cách khác nhau.
+Tính đa hình có 2 cách thể hiện trong code là: method overloading và method overriding
+để thể hiện phương pháp này cần dùng 2 từ khóa: virtual(có thể ghi đè được) và override(đánh dấu phương thức ghi đè lên phương thức của lớp cha).
+Tính trừu tượng định nghĩa lên những hành động, tính chất của loại đối tượng nào đó cần phải có. Có 2 cơ chế chính là:
+. Abstract class
+.Interface
+
+Câu 4. overriding và overloading
+1. Overloading (nạp chồng)
+Là việc đinh nghĩa nhiều phương thức cùng tên trong cùng một lớp nhưng có số lượng hoặc kiểu dữ liệu của tham số khác nhau. Ngoài ra, phạm vi truy cập (access modifier), kiểu trả về (return type) và ngoại lệ (exceptions) không ảnh hưởng.
+2. Overriding (ghi đè)
+Là việc lớp con gi đè phương thức của lớp cha, thay đổi cách thực hiện phương thức đó.
+Quy tắc: Phương thức của lớp con phải cùng tên, cùng tham số và cùng kiểu trả về với phương thức của lớp cha. Ngoài ra, phạm vi truy cập (access modifier) của phương thức lớp con phải rộng hơn hoặc bằng phạm vi truy cập của lớp cha. Nếu phương thức lớp cha ném ra exception, phương thức lớp con chỉ được ném ra các exception con của exception cha hoặc không ném ra exception.
+
+Câu 5: Có 2 kiểu dữ liệu là kiểu dữ liệu nguyên thủy (primitive) và kiểu dữ liệu không nguyên thủy (non-primitive)
+-kiểu dữ liệu nguyên thủy: byte, int, long, char, float, boolean, short, double
+-kiểu dữ liệu không nguyên thủy: String, Array, interface, class
+Trong đó: 
+--byte: kiểu só nguyên có kích thước 1 byte (=8bit), phạm vi biểu diễn giá trị từ -128 đến 127.
+--char: kiểu ký tự hoặc số nguyên ko âm có kích thước 2 byte (=16bit)
+--boolean: kiểu dữ liệu chỉ trạng thái đúng hoặc sai.
+--short: kiểu số nguyên có kích cỡ 2byte (=16bit), phạm vi giá trị từ -32768 đến 32767.
+--int: kiểu số nguyên kích cỡ 4byte (=32bit), phạm vi giá trị -2147483648 đến 2147483647.
+--long: Kiểu số nguyên có kích cỡ 8byte.
+--float: kiểu số thực có kích cỡ 4byte.
+--double: kiểu số thực có kích cỡ 8byte.
+--String: chuỗi.
+--Array: mảng.
+--class:kiểu lớp đối tượng.
+--interface: kiểu lớp giao diện.
+
+Câu 6: Access modifier
+-public có thể truy cập ở bất cứ đâu.
+-private chỉ được sử dung trong nội bộ class.
+-protected được sử dung với lớp cha/con.
+-default là public đối với class trong cùng package và là private khi khác package.
+
+Câu 7: interface
+-là một cách khác để thực hiện tính kế thừa trong java (bên cạnh abstract class)
+-là một tập hợp của các methods (không có body)..
+-interface không có body ---> body được ghi đè lại các class "implements".
+-khi kế thừa interface cần phải ghi đè tất cả các method của interface (ngoại trừ default method).
+-mặc định, tất cả method của interface là: "abstract" + "public".
+-interface không thể có constructor.
+-một class có thể kế thừa cùng lúc nhiều interface.
+
+Câu 8: abstract
+trong java, abstract class là một lớp mà không thể tạo ra một đối tượng (instance) trực tiếp từ lớp đó. Thay vào đó, nó được sử dung để tạo ra các lớp con kế thừa các thuộc tính và phương thức của lớp cha.
+Khi nào cần sử dung adstract class?
+-cung cấp chức năng mặc định cho các lớp con.
+-Cung cấp một mẫu (template) cho các lớp cụ thể trong tương lai.
+-Giúp bạn định nghĩa một giao diện chung cho các lớp con của nó.
+-Khi muốn khai báo các thành viên không công khai.
+-Khi muốn them các phương thức mới.
+-tạo nhiều phiên bản của thành phần. 
+
+
+
+
+
+
